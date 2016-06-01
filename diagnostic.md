@@ -6,21 +6,23 @@ Record your responses inside the fenced code blocks below each question.
     and what are the main task(s) you perform inside an Ember Route?
 
     ```md
-    <!-- your response here -->
+Application router: store all the application routes
+Ember route: store the appropriate model
+
     ```
 
 1.  What is the command to generate a route named `boston` nested under
     `campus`?
 
     ```md
-    <!-- your response here -->
+  ember g campus/boston
     ```
 
 1.  Suppose you have a nested route at the URL `/campus/boston`. How would you
     use the `link-to` helper to generate an appropriate link?
 
     ```md
-    <!-- your response here -->
+  {{#link-to 'campuses'}}Back to Other Campuses {{/link-to}}
     ```
 
 1.  Explain **at least** two differences between the following two route
@@ -35,7 +37,10 @@ Record your responses inside the fenced code blocks below each question.
     ```
 
     ```md
-    <!-- your response here -->
+    '/products/:product_id' is masking the singluar product path to a singular product id
+
+    '/:product_id' is linking directly to a product (not in the products directory)
+
     ```
 
 1.  Suppose we have the following route definition:
@@ -48,11 +53,15 @@ Record your responses inside the fenced code blocks below each question.
     value `'123'` inside a Route?
 
     ```md
-    <!-- your response here -->
+    Pass a parameter (params) to the model function that holds the dynamic segment of a route.
+    [params.movie_id - 1]
     ```
 
 1.  Inside a template, how do we reference data provided by a Route?
 
     ```md
-    <!-- your response here -->
+  model method
+  {{#each model as |post|}}
+  <p>{{post.body}}</p>
+  {{/each}}
     ```
